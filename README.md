@@ -63,7 +63,7 @@ Fingerprints (hash,episode_id, offset)
 Relate fingerprints.episode_id = episodes.episode_id 
 
 
-Recognizing:
+####Recognizing:
 
 Input -> Raw Data -> Run Low Pass Filter- > Peak Picking -> Hash -> Find Matches -> determine episode with largest presence in the matches. 
 
