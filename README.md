@@ -21,6 +21,7 @@ Example Run:
 ##How it works
 
 Consists of two main functions:
+
 1. Fingerprinting an episode
 2. Recognizing a sample 
 
