@@ -1,9 +1,9 @@
-#Seinfeld Fingerprinting
+# Seinfeld Fingerprinting
 
 
 [CS591- Computational Audio](http://www.cs.bu.edu/~snyder/cs591/): Final Project 
 
-##Running the program
+## Running the program
 
 
 After installing dependencies:
@@ -18,14 +18,14 @@ Example Run:
 
 ![](http://mattsauerbach.com/591/1.png)
 
-##How it works
+## How it works
 
 Consists of two main functions:
 
 1. Fingerprinting an episode
 2. Recognizing a sample 
 
-####Fingerprinting
+#### Fingerprinting
 
 I followed methodologies taught in class, reviewed the fingerprinting powerpoint and used research papers that explain the Shazam method. The standard is taking the spectrogram from the Discrete Fourier Transform (DFT) and then apply a peak picking algorithm (finding local maxima). We find the local maxima at each window using a window size of 4096 and overlap of 2048. We then need to create a hash with the episode ID. This will be used during recognition when we apply the same fingerprinting algorithm to the sample and then match the hashes. To create a unique hash we take the local maxima and the delta between adjacent maximas. We then store these hashes in the database.  
 
@@ -63,7 +63,7 @@ Fingerprints (hash,episode_id, offset)
 Relate fingerprints.episode_id = episodes.episode_id 
 
 
-####Recognizing:
+#### Recognizing:
 
 Input -> Raw Data -> Run Low Pass Filter- > Peak Picking -> Hash -> Find Matches -> determine episode with largest presence in the matches. 
 
